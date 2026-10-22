@@ -3,6 +3,7 @@ using UnityEngine;
 public class myfirstscript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         
@@ -30,18 +31,24 @@ public class myfirstscript : MonoBehaviour
             transform.position += Vector3.down * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
 
         {
 
-            transform.position += Vector3.down * Time.deltaTime;
+            transform.position += Vector3.left * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
 
         {
 
-            transform.position += Vector3.down * Time.deltaTime;
+            transform.position += Vector3.right * Time.deltaTime;
+        }
+
+        if(Input.GetKey(KeyCode.Space))
+
+        {
+            transform.position += Vector3.forward * Time.deltaTime;
         }
     }
 }
